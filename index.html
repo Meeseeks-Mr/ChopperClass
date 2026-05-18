@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#f6f3ec" />
+    <title>ChopperClass — How Helicopters Fly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='80' font-size='80'%3E%F0%9F%9A%81%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+
+    <!-- ====================== SPLASH ====================== -->
+    <div id="splash">
+      <div class="splash-card">
+        <div class="splash-rotor">
+          <div class="hub"></div>
+          <span class="blade b1"></span>
+          <span class="blade b2"></span>
+          <span class="blade b3"></span>
+          <span class="blade b4"></span>
+        </div>
+        <h1 class="splash-title">Chopper<span>Class</span></h1>
+        <p class="splash-tag">A pocket flight school for the helicopter-curious</p>
+        <p class="splash-credit">
+          engineered with great seriousness by <strong>dio.stesso</strong>,<br/>
+          who, by all available evidence, has far too much time on his hands.
+        </p>
+        <div class="splash-progress"><div class="bar"></div></div>
+        <div class="splash-status">spinning up the rotors…</div>
+        <button id="splashEnter" class="splash-btn" disabled>Take off →</button>
+      </div>
+    </div>
+
+    <!-- ====================== APP ====================== -->
+    <div id="app">
+
+      <!-- Top bar: big title + subtle credit -->
+      <header id="topbar">
+        <div class="brand">
+          <div class="brand-mark">
+            <span class="b b1"></span><span class="b b2"></span>
+            <span class="b b3"></span><span class="b b4"></span>
+          </div>
+          <div class="brand-text">
+            <h1 class="title">Chopper<span class="accent">Class</span></h1>
+            <div class="credit">by <em>dio.stesso</em> · who clearly should be doing something else</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Persistent lesson rail (always visible) -->
+      <aside id="lessonRail" aria-label="Lessons">
+        <ol id="lessonList"></ol>
+      </aside>
+
+      <!-- Stage: full-screen viz + overlays -->
+      <main id="stage">
+        <div id="viz"></div>
+        <div id="vizTip" class="tooltip">drag to rotate · pinch to zoom</div>
+
+        <!-- Floating glass controls strip (bottom-center) -->
+        <section id="controls" class="glass strong"></section>
+
+        <!-- Lesson chrome (prev/next) -->
+        <button id="prevBtn" class="nav-arrow glass left"  aria-label="Previous lesson">‹</button>
+        <button id="nextBtn" class="nav-arrow glass right" aria-label="Next lesson">›</button>
+
+        <!-- Floating lesson chip at top center -->
+        <div id="lessonChip" class="glass"></div>
+
+        <!-- Subtle "Read Me" pill on the viz -->
+        <button id="descBtn" class="readme-pill" aria-label="Read the lesson">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M4 4v12a4 4 0 0 0 4 4"/>
+          </svg>
+          <span>Read Me</span>
+        </button>
+      </main>
+
+      <!-- Reading modal (description) -->
+      <div id="modalScrim" class="hidden">
+        <div id="modal" class="glass strong">
+          <button id="modalClose" class="icon-btn close" aria-label="Close">✕</button>
+          <header><h2 id="modalTitle"></h2></header>
+          <div id="modalBody"></div>
+        </div>
+      </div>
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

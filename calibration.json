@@ -1,0 +1,153 @@
+{
+  "modelPath": "./models/oh1.glb",
+  "version": 1,
+  "rootOffset": {
+    "position": [
+      0,
+      1.711642861366272,
+      0
+    ],
+    "quaternion": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "nodeOverrides": {
+    "Rotor001": {
+      "position": [
+        0,
+        1.4658376185731863,
+        0.013322554966046934
+      ],
+      "quaternion": [
+        -0.017452406437283505,
+        0,
+        0,
+        0.9998476951563913
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "roles": {
+    "mainRotor": {
+      "nodeName": "Rotor",
+      "spinAxis": [
+        0,
+        1,
+        0
+      ],
+      "spinSign": 1,
+      "pivot": [
+        0,
+        0,
+        0
+      ]
+    },
+    "tailRotor": null,
+    "blades": [
+      {
+        "nodeName": "Rotor001",
+        "spinAxis": [
+          0,
+          1,
+          0
+        ],
+        "spinSign": 1,
+        "pitchAxis": [
+          -1,
+          0,
+          0
+        ],
+        "pitchMinDeg": -20,
+        "pitchMaxDeg": 30,
+        "pivot": [
+          0,
+          1.85,
+          0
+        ]
+      },
+      {
+        "nodeName": "Rotor002",
+        "spinAxis": [
+          0,
+          1,
+          0
+        ],
+        "spinSign": 1,
+        "pitchAxis": [
+          0,
+          0,
+          -1
+        ],
+        "pitchMinDeg": -20,
+        "pitchMaxDeg": 30,
+        "pivot": [
+          0,
+          1.85,
+          0
+        ]
+      },
+      {
+        "nodeName": "Rotor003",
+        "spinAxis": [
+          0,
+          1,
+          0
+        ],
+        "spinSign": 1,
+        "pitchAxis": [
+          1,
+          0,
+          0
+        ],
+        "pitchMinDeg": -20,
+        "pitchMaxDeg": 30,
+        "pivot": [
+          0,
+          1.85,
+          0
+        ]
+      },
+      {
+        "nodeName": "Rotor004",
+        "spinAxis": [
+          0,
+          1,
+          0
+        ],
+        "spinSign": 1,
+        "pitchAxis": [
+          0,
+          0,
+          1
+        ],
+        "pitchMinDeg": -20,
+        "pitchMaxDeg": 30,
+        "pivot": [
+          0,
+          1.85,
+          0
+        ]
+      }
+    ],
+    "body": [],
+    "cabin": null,
+    "tailBoom": null,
+    "mast": null,
+    "skids": [],
+    "pilots": [],
+    "tailFin": null,
+    "engineCover": null
+  }
+}

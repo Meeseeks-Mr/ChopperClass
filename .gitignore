@@ -1,0 +1,69 @@
+# ====================================================================
+#  ChopperClass — .gitignore
+# ====================================================================
+
+# ---- Build & dependency artefacts ----
+node_modules/
+dist/
+.cache/
+.vite/
+*.tsbuildinfo
+
+# ---- Editor / IDE / OS ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Claude / agent metadata ----
+.claude/
+.claude*/
+CLAUDE.md
+claude-*.log
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Environment / secrets ----
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ---- Calibration / authoring tools (not needed for runtime) ----
+# The calibrated output (public/calibration.json) IS used by the app
+# and is committed. The HTML tool that generated it is excluded.
+tools/
+
+# ---- Raw source assets (the runtime model is public/models/oh1.glb) ----
+OH-1.fbx
+OH-1.FBX
+*.fbx
+*.blend
+*.max
+*.c4d
+
+# ---- Documentation / scratch images in the repo root ----
+# Reference screenshots and reviewer images live alongside the code while
+# the project is being iterated on, but they should not ship to GitHub.
+desktop.jpg
+mobile.jpg
+Screenshot.jpg
+Airfoil.jpg
+airfoil.jpg
+*.psd
+
+# ---- Convenience: anything in a folder called "scratch" or "wip" ----
+scratch/
+wip/
+todo.txt
+NOTES.md
